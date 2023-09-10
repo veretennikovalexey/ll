@@ -102,28 +102,28 @@ Notice that instead of printing the value of &#x60;$USER&#x60;, single quotes ca
 
 By default, a program reads input from *standard input*, the keyboard, and writes output to *standard output*, the terminal. However, using IO redirection, you can redirect a program\&#x27;s input or output to or from a file or another program.
 
-### Redirect output &#x60;&gt;&#x60;
+### Redirect output <code class="language-plaintext highlighter-rouge">></code>
 This symbol is used to redirect the standard output of a command to a specified file.
 
 &gt; &#x60;ls &gt; files.txt&#x60; will create a file called &#x60;files.txt&#x60; if it doesn\&#x27;t exist, and write the output of the &#x60;ls&#x60; command to it.
 
 &gt; Warning: When the file already exists, the output overwrites all of the file\&#x27;s contents!
 
-### Redirect and append output &#x60;&gt;&gt;&#x60;
+### Redirect and append output <code class="language-plaintext highlighter-rouge">>></code>
 This notation is used to redirect and append the output of a command to the end of a file. For example, 
 &gt; &#x60;ls &gt;&gt; files.txt&#x60; appends the output of the &#x60;ls&#x60; command to the end of file &#x60;files.txt&#x60;, and preserves any content that already existed in the file.
 
-### Redirect standard output &#x60;2&gt;&#x60;
+### Redirect standard output <code class="language-plaintext highlighter-rouge">2></code>
 This notation is used to redirect the standard error output of a command to a file. For example, if you run the ls command on a non-existing directory as follows,
 &gt; &#x60;ls non-existent-directory 2&gt; error.txt&#x60; the shell will create a file called &#x60;error.txt&#x60; if it doesn\&#x27;t exist, and redirect the error output of the &#x60;ls&#x60; command to the file.
 
 &gt; Warning: When the file already exists, the error message overwrites all of the file\&#x27;s contents!
 
-### Append standard error &#x60;2&gt;&gt;&#x60;
+### Append standard error <code class="language-plaintext highlighter-rouge">2>></code>
 This symbol redirects the standard error output of a command and appends the error message to the end of a file without overwriting its contents.
 &gt; &#x60;ls non-existent-directory 2&gt;&gt; error.txt&#x60; will append the error output of the &#x60;ls&#x60; command to the end of the &#x60;error.txt&#x60; file.
 
-### Redirect input &#x60;&lt;&#x60;
+### Redirect input <code class="language-plaintext highlighter-rouge"><</code>
 This symbol is used to redirect the standard input of a command from a file or another command. For example,
 &gt; &#x60;sort &lt; data.txt&#x60; will &#x60;sort&#x60; the contents of the &#x60;data.txt&#x60; file.
 
