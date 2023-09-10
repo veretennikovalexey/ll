@@ -13,7 +13,7 @@ After completing this reading, you will be able to:
 
 | Metacharacter | Meaning |
 |----|----|
-| &#x60;#&#x60; | Precedes a comment |
+| # | Precedes a comment |
 | &#x60;;&#x60; | Command separator |
 | &#x60;*&#x60; | Filename expansion wildcard |
 | &#x60;?&#x60; | Single character wildcard in filename expansion |
@@ -89,13 +89,14 @@ Hello $USER
 Notice that instead of printing the value of &#x60;$USER&#x60;, single quotes cause the terminal to print the string &#x60;&quot;$USER&quot;&#x60;.
 
 ## Input/Output redirection
+
 | Symbol | Meaning                                  |
 |------|--------------------------------------------|
-|&#x60;&gt;&#x60;   | Redirect output to file, overwrite         |
-|&#x60;&gt;&gt;&#x60;  | Redirect output to file, append            |
-|&#x60;2&gt;&#x60;  | Redirect standard error to file, overwrite |
-|&#x60;2&gt;&gt;&#x60; | Redirect standard error to file, append    |
-|&#x60;&lt;&#x60;   | Redirect file contents to standard input   |
+| >   | Redirect output to file, overwrite         |
+| >>  | Redirect output to file, append            |
+| 2>  | Redirect standard error to file, overwrite |
+| 2>> | Redirect standard error to file, append    |
+| <   | Redirect file contents to standard input   |
 
 **Input/output (IO) redirection** is the process of directing the flow of data between a program and its input/output sources.
 
