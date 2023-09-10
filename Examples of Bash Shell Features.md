@@ -21,7 +21,7 @@ After completing this reading, you will be able to:
 ### Pound <code class="language-plaintext highlighter-rouge">#</code>
 The pound <code class="language-plaintext highlighter-rouge">#</code> metacharacter is used to represent comments in shell scripts or configuration files. Any text that appears after a <code class="language-plaintext highlighter-rouge">#</code> on a line is treated as a comment and is ignored by the shell.
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// mod
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 #!/bin/bash
 # This is a comment
 echo "Hello, world!"  # This is another comment
