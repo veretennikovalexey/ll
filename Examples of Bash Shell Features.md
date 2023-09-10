@@ -21,54 +21,37 @@ After completing this reading, you will be able to:
 ### Pound <code class="language-plaintext highlighter-rouge">#</code>
 The pound <code class="language-plaintext highlighter-rouge">#</code> metacharacter is used to represent comments in shell scripts or configuration files. Any text that appears after a <code class="language-plaintext highlighter-rouge">#</code> on a line is treated as a comment and is ignored by the shell.
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-#!/bin/bash
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#!/bin/bash
 # This is a comment
 echo "Hello, world!"  # This is another comment
 </code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// mod
-parameters a, b
-if empty( b )
-  result := 0
-  return
-endif
-result := a - int( a / b ) * b  
-</code></pre></div></div>
-
-&#x60;&#x60;&#x60;
-#!/bin/bash
-
-# This is a comment
-echo &quot;Hello, world!&quot;  # This is another comment
-&#x60;&#x60;&#x60;
 
 Comments are useful for documenting your code or configuration files, providing context, and explaining the purpose of the code to other developers who may read it. It\&#x27;s a best practice to include comments in your code or configuration files wherever necessary to make them more readable and maintainable.
 
 ### Semicolon <code class="language-plaintext highlighter-rouge">;</code>
 The semicolon <code class="language-plaintext highlighter-rouge">;</code> metacharacter is used to separate multiple commands on a single command line. When multiple commands are separated by a semicolon, they are executed sequentially in the order they appear on the command line.
-&#x60;&#x60;&#x60;
-$ echo &quot;Hello, &quot;; echo &quot;world!&quot;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "Hello, "; echo "world!"
 Hello,
-world!
-&#x60;&#x60;&#x60;
+world!</code></pre></div></div>
+
 As you can see from the example above, the output of each &#x60;echo&#x60; command is printed on separate lines and follows the same sequence in which the commands were specified.
 
 The semicolon metacharacter is useful when you need to run multiple commands sequentially on a single command line.
 
 ### Asterisk <code class="language-plaintext highlighter-rouge">*</code>
 The asterisk <code class="language-plaintext highlighter-rouge">*</code> metacharacter is used as a wildcard character to represent any sequence of characters, including none.
-&#x60;&#x60;&#x60;
-ls *.txt
-&#x60;&#x60;&#x60;
-In this example, &#x60;*.txt&#x60; is a wildcard pattern that matches any file in the current directory with a &#x60;.txt&#x60; extension. The &#x60;ls&#x60; command lists the names of all matching files.
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls *.txt</code></pre></div></div>
+
+In this example, <code class="language-plaintext highlighter-rouge">*</code> is a wildcard pattern that matches any file in the current directory with a &#x60;.txt&#x60; extension. The &#x60;ls&#x60; command lists the names of all matching files.
 
 ### Question mark <code class="language-plaintext highlighter-rouge">?</code>
 The question mark <code class="language-plaintext highlighter-rouge">?</code> metacharacter is used as a wildcard character to represent any single character.
-&#x60;&#x60;&#x60;
-ls file?.txt
-&#x60;&#x60;&#x60;
-In this example, &#x60;file?.txt&#x60; is a wildcard pattern that matches any file in the current directory with a name starting with &#x60;file&#x60;, followed by any single character, and ending with the &#x60;.txt&#x60; extension.
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls file?.txt</code></pre></div></div>
+
+In this example, <code class="language-plaintext highlighter-rouge">file?.txt</code> is a wildcard pattern that matches any file in the current directory with a name starting with <code class="language-plaintext highlighter-rouge">file</code>, followed by any single character, and ending with the <code class="language-plaintext highlighter-rouge">.txt</code> extension.
 
 ## Quoting
 
@@ -82,25 +65,21 @@ In this example, &#x60;file?.txt&#x60; is a wildcard pattern that matches any fi
 
 ### Backslash <code class="language-plaintext highlighter-rouge">\</code>
 The backslash character is used as an escape character. It instructs the shell to preserve the literal interpretation of special characters such as space, tab, and &#x60;$&#x60;. For example, if you have a file with spaces in its name, you can use backslashes followed by a space to handle those spaces literally:
-&#x60;&#x60;&#x60;
-touch file\ with\ space.txt
-&#x60;&#x60;&#x60;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch file\ with\ space.txt</code></pre></div></div>
 
 ### Double quotes <code class="language-plaintext highlighter-rouge">" "</code>
 When a string is enclosed in double quotes, most characters are interpreted literally, but metacharacters are interpreted according to their special meaning. For example, you can access variable values using the dollar &#x60;$&#x60; character:
 
-&#x60;&#x60;&#x60;
-$ echo &quot;Hello $USER&quot;
-Hello &lt;username&gt;
-&#x60;&#x60;&#x60;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "Hello $USER"
+Hello <username></code></pre></div></div>
 
 ### Single quotes <code class="language-plaintext highlighter-rouge">' '</code>
 When a string is enclosed in single quotes, all characters and metacharacters enclosed within the quotes are interpreted literally. Single quotes alter the above example to produce the following output:
 
-&#x60;&#x60;&#x60;
-$ echo &#x27;Hello $USER&#x27;
-Hello $USER
-&#x60;&#x60;&#x60;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo 'Hello $USER'
+Hello $USER</code></pre></div></div>
+
 Notice that instead of printing the value of &#x60;$USER&#x60;, single quotes cause the terminal to print the string &#x60;&quot;$USER&quot;&#x60;.
 
 ## Input/Output redirection
@@ -147,20 +126,17 @@ This symbol is used to redirect the standard input of a command from a file or a
 **Command substitution** allows you to run command and use its output as a component of another command\&#x27;s argument. Command substitution is denoted by enclosing a command in either backticks (**\&#x60;command\&#x60;**) or using the &#x60;$()&#x60; syntax. When the encapsulate command is executed, its output is substituted in place, and it can be used as an argument within another command. This is particularly useful for automating tasks that require the use of a command\&#x27;s output as input for another command. 
 
 For example, you could store the path to your current directory in a variable by applying command substitution on the &#x60;pwd&#x60; command, then move to another directory, and finally return to your original directory by invoking the &#x60;cd&#x60; command on the variable you stored, as follows:  
-&#x60;&#x60;&#x60;
-$ here &#x3D; $(pwd)
-$ cd path_to_some_other_directory
-$ cd $here
-&#x60;&#x60;&#x60;
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ here = $(pwd)
+$ cd path_to_some_other_directory
+$ cd $here</code></pre></div></div>
 
 ## Command Line Arguments
 **Command line arguments** are additional inputs that can be passed to a program when the program is run from a command line interface. These arguments are specified after the name of the program, and they can be used to modify the behavior of the program, provide input data, or provide output locations. Command line arguments are used to pass arguments to a shell script.
 
 For example, the following command provides two arguments, arg1, and arg2, that can be accessed from within your Bash script:
-&#x60;&#x60;&#x60;
-$ ./MyBashScript.sh arg1 arg2
-&#x60;&#x60;&#x60;
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./MyBashScript.sh arg1 arg2</code></pre></div></div>
 
 ## Summary
 In this reading, you learned that:
