@@ -35,7 +35,7 @@ The semicolon <code class="language-plaintext highlighter-rouge">;</code> metach
 Hello,
 world!</code></pre></div></div>
 
-As you can see from the example above, the output of each &#x60;echo&#x60; command is printed on separate lines and follows the same sequence in which the commands were specified.
+As you can see from the example above, the output of each <code class="language-plaintext highlighter-rouge">echo</code> command is printed on separate lines and follows the same sequence in which the commands were specified.
 
 The semicolon metacharacter is useful when you need to run multiple commands sequentially on a single command line.
 
@@ -44,7 +44,7 @@ The asterisk <code class="language-plaintext highlighter-rouge">*</code> metacha
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls *.txt</code></pre></div></div>
 
-In this example, <code class="language-plaintext highlighter-rouge">*</code> is a wildcard pattern that matches any file in the current directory with a &#x60;.txt&#x60; extension. The &#x60;ls&#x60; command lists the names of all matching files.
+In this example, <code class="language-plaintext highlighter-rouge">*</code> is a wildcard pattern that matches any file in the current directory with a <code class="language-plaintext highlighter-rouge">.txt</code> extension. The <code class="language-plaintext highlighter-rouge">ls</code> command lists the names of all matching files.
 
 ### Question mark <code class="language-plaintext highlighter-rouge">?</code>
 The question mark <code class="language-plaintext highlighter-rouge">?</code> metacharacter is used as a wildcard character to represent any single character.
@@ -64,15 +64,15 @@ In this example, <code class="language-plaintext highlighter-rouge">file?.txt</c
 | <code class="language-plaintext highlighter-rouge">' '</code>  | Escape all metacharacters within string |
 
 ### Backslash <code class="language-plaintext highlighter-rouge">\</code>
-The backslash character is used as an escape character. It instructs the shell to preserve the literal interpretation of special characters such as space, tab, and &#x60;$&#x60;. For example, if you have a file with spaces in its name, you can use backslashes followed by a space to handle those spaces literally:
+The backslash character is used as an escape character. It instructs the shell to preserve the literal interpretation of special characters such as space, tab, and <code class="language-plaintext highlighter-rouge">$</code>. For example, if you have a file with spaces in its name, you can use backslashes followed by a space to handle those spaces literally:
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch file\ with\ space.txt</code></pre></div></div>
 
 ### Double quotes <code class="language-plaintext highlighter-rouge">" "</code>
-When a string is enclosed in double quotes, most characters are interpreted literally, but metacharacters are interpreted according to their special meaning. For example, you can access variable values using the dollar &#x60;$&#x60; character:
+When a string is enclosed in double quotes, most characters are interpreted literally, but metacharacters are interpreted according to their special meaning. For example, you can access variable values using the dollar <code class="language-plaintext highlighter-rouge">$</code> character:
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "Hello $USER"
-Hello <username></code></pre></div></div>
+Hello alex</code></pre></div></div>
 
 ### Single quotes <code class="language-plaintext highlighter-rouge">' '</code>
 When a string is enclosed in single quotes, all characters and metacharacters enclosed within the quotes are interpreted literally. Single quotes alter the above example to produce the following output:
@@ -80,7 +80,7 @@ When a string is enclosed in single quotes, all characters and metacharacters en
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo 'Hello $USER'
 Hello $USER</code></pre></div></div>
 
-Notice that instead of printing the value of &#x60;$USER&#x60;, single quotes cause the terminal to print the string &#x60;&quot;$USER&quot;&#x60;.
+Notice that instead of printing the value of <code class="language-plaintext highlighter-rouge">$USER</code>, single quotes cause the terminal to print the string <code class="language-plaintext highlighter-rouge">$USER</code>.
 
 ## Input/Output redirection
 
