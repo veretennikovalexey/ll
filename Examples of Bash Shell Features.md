@@ -65,7 +65,7 @@ In this example, &#x60;file?.txt&#x60; is a wildcard pattern that matches any fi
 | " "  | Interpret metacharacters within string  |
 | ' '  | Escape all metacharacters within string |
 
-### Backslash &#x60;\&#x60;
+### Backslash `\`
 The backslash character is used as an escape character. It instructs the shell to preserve the literal interpretation of special characters such as space, tab, and &#x60;$&#x60;. For example, if you have a file with spaces in its name, you can use backslashes followed by a space to handle those spaces literally:
 &#x60;&#x60;&#x60;
 touch file\ with\ space.txt
