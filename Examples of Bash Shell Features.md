@@ -13,7 +13,7 @@ After completing this reading, you will be able to:
 
 | Metacharacter | Meaning |
 |----|----|
-| # | Precedes a comment |
+| <p><code class="language-plaintext highlighter-rouge">#</code></p> | Precedes a comment |
 | &#x60;;&#x60; | Command separator |
 | &#x60;*&#x60; | Filename expansion wildcard |
 | &#x60;?&#x60; | Single character wildcard in filename expansion |
