@@ -13,13 +13,13 @@ After completing this reading, you will be able to:
 
 | Metacharacter | Meaning |
 |----|----|
-| <p><code class="language-plaintext highlighter-rouge">#</code></p> | Precedes a comment |
-| &#x60;;&#x60; | Command separator |
-| &#x60;*&#x60; | Filename expansion wildcard |
-| &#x60;?&#x60; | Single character wildcard in filename expansion |
+| <code class="language-plaintext highlighter-rouge">#</code> | Precedes a comment |
+| <code class="language-plaintext highlighter-rouge">;</code> | Command separator |
+| <code class="language-plaintext highlighter-rouge">*</code> | Filename expansion wildcard |
+| <code class="language-plaintext highlighter-rouge">?</code> | Single character wildcard in filename expansion |
 
-### Pound &#x60;#&#x60;
-The pound &#x60;#&#x60; metacharacter is used to represent comments in shell scripts or configuration files. Any text that appears after a &#x60;#&#x60; on a line is treated as a comment and is ignored by the shell.
+### Pound <code class="language-plaintext highlighter-rouge">#</code>
+The pound <code class="language-plaintext highlighter-rouge">#</code> metacharacter is used to represent comments in shell scripts or configuration files. Any text that appears after a <code class="language-plaintext highlighter-rouge">#</code> on a line is treated as a comment and is ignored by the shell.
 
 &#x60;&#x60;&#x60;
 #!/bin/bash
@@ -30,8 +30,8 @@ echo &quot;Hello, world!&quot;  # This is another comment
 
 Comments are useful for documenting your code or configuration files, providing context, and explaining the purpose of the code to other developers who may read it. It\&#x27;s a best practice to include comments in your code or configuration files wherever necessary to make them more readable and maintainable.
 
-### Semicolon &#x60;;&#x60;
-The semicolon &#x60;;&#x60; metacharacter is used to separate multiple commands on a single command line. When multiple commands are separated by a semicolon, they are executed sequentially in the order they appear on the command line.
+### Semicolon <code class="language-plaintext highlighter-rouge">;</code>
+The semicolon <code class="language-plaintext highlighter-rouge">;</code> metacharacter is used to separate multiple commands on a single command line. When multiple commands are separated by a semicolon, they are executed sequentially in the order they appear on the command line.
 &#x60;&#x60;&#x60;
 $ echo &quot;Hello, &quot;; echo &quot;world!&quot;
 Hello,
@@ -41,15 +41,15 @@ As you can see from the example above, the output of each &#x60;echo&#x60; comma
 
 The semicolon metacharacter is useful when you need to run multiple commands sequentially on a single command line.
 
-### Asterisk &#x60;*&#x60;
-The asterisk &#x60;*&#x60; metacharacter is used as a wildcard character to represent any sequence of characters, including none.
+### Asterisk <code class="language-plaintext highlighter-rouge">*</code>
+The asterisk <code class="language-plaintext highlighter-rouge">*</code> metacharacter is used as a wildcard character to represent any sequence of characters, including none.
 &#x60;&#x60;&#x60;
 ls *.txt
 &#x60;&#x60;&#x60;
 In this example, &#x60;*.txt&#x60; is a wildcard pattern that matches any file in the current directory with a &#x60;.txt&#x60; extension. The &#x60;ls&#x60; command lists the names of all matching files.
 
-### Question mark &#x60;?&#x60;
-The question mark &#x60;?&#x60; metacharacter is used as a wildcard character to represent any single character.
+### Question mark <code class="language-plaintext highlighter-rouge">?</code>
+The question mark <code class="language-plaintext highlighter-rouge">?</code> metacharacter is used as a wildcard character to represent any single character.
 &#x60;&#x60;&#x60;
 ls file?.txt
 &#x60;&#x60;&#x60;
@@ -61,17 +61,17 @@ In this example, &#x60;file?.txt&#x60; is a wildcard pattern that matches any fi
 
 | Symbol | Meaning |
 |--------|-----------------------------------------|
-| \    | Escape metacharacter interpretation     |
-| " "  | Interpret metacharacters within string  |
-| ' '  | Escape all metacharacters within string |
+| <code class="language-plaintext highlighter-rouge">\</code>    | Escape metacharacter interpretation     |
+| <code class="language-plaintext highlighter-rouge">" "</code>  | Interpret metacharacters within string  |
+| <code class="language-plaintext highlighter-rouge">' '</code>  | Escape all metacharacters within string |
 
-### Backslash `\`
+### Backslash <code class="language-plaintext highlighter-rouge">\</code>
 The backslash character is used as an escape character. It instructs the shell to preserve the literal interpretation of special characters such as space, tab, and &#x60;$&#x60;. For example, if you have a file with spaces in its name, you can use backslashes followed by a space to handle those spaces literally:
 &#x60;&#x60;&#x60;
 touch file\ with\ space.txt
 &#x60;&#x60;&#x60;
 
-### Double quotes &#x60;&quot; &quot;&#x60;
+### Double quotes <code class="language-plaintext highlighter-rouge">" "</code>
 When a string is enclosed in double quotes, most characters are interpreted literally, but metacharacters are interpreted according to their special meaning. For example, you can access variable values using the dollar &#x60;$&#x60; character:
 
 &#x60;&#x60;&#x60;
@@ -79,7 +79,7 @@ $ echo &quot;Hello $USER&quot;
 Hello &lt;username&gt;
 &#x60;&#x60;&#x60;
 
-### Single quotes &#x60;&#x27; &#x27;&#x60;
+### Single quotes <code class="language-plaintext highlighter-rouge">' '</code>
 When a string is enclosed in single quotes, all characters and metacharacters enclosed within the quotes are interpreted literally. Single quotes alter the above example to produce the following output:
 
 &#x60;&#x60;&#x60;
@@ -92,11 +92,11 @@ Notice that instead of printing the value of &#x60;$USER&#x60;, single quotes ca
 
 | Symbol | Meaning                                  |
 |------|--------------------------------------------|
-| >   | Redirect output to file, overwrite         |
-| >>  | Redirect output to file, append            |
-| 2>  | Redirect standard error to file, overwrite |
-| 2>> | Redirect standard error to file, append    |
-| <   | Redirect file contents to standard input   |
+| <code class="language-plaintext highlighter-rouge">></code>   | Redirect output to file, overwrite         |
+| <code class="language-plaintext highlighter-rouge">>></code>  | Redirect output to file, append            |
+| <code class="language-plaintext highlighter-rouge">2></code>  | Redirect standard error to file, overwrite |
+| <code class="language-plaintext highlighter-rouge">2>></code> | Redirect standard error to file, append    |
+| <code class="language-plaintext highlighter-rouge"><</code>   | Redirect file contents to standard input   |
 
 **Input/output (IO) redirection** is the process of directing the flow of data between a program and its input/output sources.
 
